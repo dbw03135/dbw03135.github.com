@@ -4,8 +4,8 @@ var minSpeed=.01;
 var maxSpeed=.08;
 var wind=3;
 var numFlakes=500;
-var context;
 var snowflakeImage = new Image();
+var coupleImage = new Image();
 var snowflakes=[];
 
 // audio
@@ -44,6 +44,7 @@ window.onload = function () {
   context = document.getElementById("canvas").getContext("2d");
   snowflakeImage.src="https://dl.dropboxusercontent.com/u/1256960/ Research/JS/Snowman/snowflake.png";
   snowflakeImage.onload=start;
+  coupleImage.src="img/couple.png";
   onResize();
   window.onresize=onResize;
   TweenMax.to("#head",1.5,{startAt:{rotation:-10},rotation:10,yoyo:true,transformOrigin:"50% 50%",repeat:-1,ease:Sine.easeInOut});
