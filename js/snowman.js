@@ -79,7 +79,6 @@ function start(){
     snowflake.y=((window.innerHeight+400)*Math.random())-400;
     snowflake.speed=(snowflake.scale*(maxSpeed-minSpeed))+minSpeed;
     snowflake.scale=(snowflake.scale*(maxScale-minScale))+minScale;
-    bgm.play();
     snowflakes.push(snowflake);
   }
   animate();
