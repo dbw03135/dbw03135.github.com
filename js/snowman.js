@@ -20,6 +20,7 @@ bgm.addEventListener('ended', function() {
     this.play();
 }, false);
 bgm.volume = 0.1;
+bgm.autoplay;
 bgm.play();
 
 function play()
