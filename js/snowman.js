@@ -9,19 +9,13 @@ var snowflakeImage = new Image();
 var snowflakes=[];
 
 // audio
-var bgm = new Audio('sound/christmas.mp3');
 var hanna = new Audio('sound/hanna.mp3');
 var aya = new Audio('sound/aya.mp3');
 var hazima = new Audio('sound/hazima.mp3');
 var sibal = new Audio('sound/sibal.mp3');
 
-bgm.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-bgm.volume = 0.1;
-bgm.autoplay = true;
-bgm.play();
+var bgm = document.getElementById("myAudio");
+bgm.volume = 0.2;
 
 function play()
 {

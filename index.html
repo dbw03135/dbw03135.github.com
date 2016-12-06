@@ -5,10 +5,13 @@
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-		<script type="text/javascript" src="js/snowman.js"></script>
 	</head>
 	<body>
+		<audio id="myAudio" autoplay>
+		  <source src="sound/christmas.mp3" type="audio/mpeg">
+		  Your browser does not support the audio element.
+		</audio>
+		<p id="demo" style="display:none"></p>
 		<svg version="1.1" id="scene" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			 viewBox="0 0 250 100" enable-background="new 0 0 250 100" xml:space="preserve">
 			<path id="drift" fill="#EAF5F9" d="M222.6,94.4c-19.6-1.8-38.8,0.7-52.6,0.8c-19.8,0.1-23.9-5.6-45-6.4c-15.7-0.6-27.5,5-47.3,2.6
@@ -36,5 +39,7 @@
 		<canvas id="canvas" width="1000" height="600">
 		  Canvas is not supported.
 		</canvas>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<script type="text/javascript" src="js/snowman.js"></script>
 	</body>
 </html>
