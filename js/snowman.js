@@ -9,12 +9,12 @@ var snowflakeImage = new Image();
 var snowflakes=[];
 
 // audio
+var bgm = new Audio('sound/christmas.mp3');
 var hanna = new Audio('sound/hanna.mp3');
 var aya = new Audio('sound/aya.mp3');
 var hazima = new Audio('sound/hazima.mp3');
 var sibal = new Audio('sound/sibal.mp3');
 
-var bgm = document.getElementById("myAudio");
 bgm.volume = 0.2;
 
 function play()
@@ -79,6 +79,7 @@ function start(){
     snowflake.y=((window.innerHeight+400)*Math.random())-400;
     snowflake.speed=(snowflake.scale*(maxSpeed-minSpeed))+minSpeed;
     snowflake.scale=(snowflake.scale*(maxScale-minScale))+minScale;
+    bgm.play();
     snowflakes.push(snowflake);
   }
   animate();
