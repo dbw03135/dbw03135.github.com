@@ -17,7 +17,7 @@ var sibal = new Audio('sound/sibal.mp3');
 
 bgm.volume = 0.2;
 
-function play()
+function soundPlay()
 {
     var a = Math.random()*4;
     a=Math.floor(a);
@@ -63,7 +63,8 @@ function knockHimDown(){
   TweenMax.to("#shadow",.5,{ x:-15,ease:Sine.easeOut});
   TweenMax.to("#shadow",1.2,{ delay:1.2,x:-5,ease:Sine.easeInOut});
   TweenMax.to("#shadow",1.5,{delay:3, x:0,yoyo:true,repeat:-1,ease:Sine.easeInOut});
-  play();
+  soundPlay();
+  bgm.play();
 }
 function blink(){
   TweenMax.to(["#eye1,#eye2"],.1,{delay:5*Math.random(),scaleY:.2,yoyo:true,repeat:1,transformOrigin:"50% 50%",onComplete:blink});
