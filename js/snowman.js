@@ -5,8 +5,46 @@ var maxSpeed=.08;
 var wind=3;
 var numFlakes=500;
 var context;
-var snowflakeImage= new Image();
+var snowflakeImage = new Image();
 var snowflakes=[];
+
+// audio
+var bgm = new Audio('sound/christmas.mp3');
+var hanna = new Audio('sound/hanna.mp3');
+var aya = new Audio('sound/aya.mp3');
+var hazima = new Audio('sound/hazima.mp3');
+var sibal = new Audio('sound/sibal.mp3');
+
+bgm.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+bgm.volume = 0.1;
+bgm.play();
+
+function play()
+{
+    var a = Math.random()*4;
+    a=Math.floor(a);
+
+    if(a==3)
+    {
+        hanna.play();
+    }
+    if(a==2)
+    {
+        aya.play();
+    }
+    if(a==1)
+    {
+        hazima.play();
+    }
+    if(a==0)
+    {
+        sibal.play();
+    }
+}
+
 window.onload = function () {
   context = document.getElementById("canvas").getContext("2d");
   snowflakeImage.src="https://dl.dropboxusercontent.com/u/1256960/ Research/JS/Snowman/snowflake.png";
@@ -30,6 +68,7 @@ function knockHimDown(){
   TweenMax.to("#shadow",.5,{ x:-15,ease:Sine.easeOut});
   TweenMax.to("#shadow",1.2,{ delay:1.2,x:-5,ease:Sine.easeInOut});
   TweenMax.to("#shadow",1.5,{delay:3, x:0,yoyo:true,repeat:-1,ease:Sine.easeInOut});
+  play();
 }
 function blink(){
   TweenMax.to(["#eye1,#eye2"],.1,{delay:5*Math.random(),scaleY:.2,yoyo:true,repeat:1,transformOrigin:"50% 50%",onComplete:blink});
